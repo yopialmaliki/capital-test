@@ -34,6 +34,10 @@ class LandingPageController extends Controller {
         try {
             DB::beginTransaction();
 
+            $request->validate([
+                'identity_number' => 'required|max:16',
+            ]);
+
             $user = User::where('username', $request->username)->first();
 
             if($user){
