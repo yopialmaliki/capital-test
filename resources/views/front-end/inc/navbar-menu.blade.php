@@ -5,7 +5,7 @@
                 <a class="nav-link active" aria-current="page" href="{{ route('index') }}">HOME |</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('public.register') }}">REGISTER</a>
+                <a class="nav-link" href="{{ route('register') }}">REGISTER</a>
             </li>
           @else
             <li class="nav-item list-unstyled">
