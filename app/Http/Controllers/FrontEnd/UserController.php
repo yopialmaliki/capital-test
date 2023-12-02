@@ -23,7 +23,7 @@ class UserController extends Controller {
 
         Auth::logout();
 
-        return redirect(route('public.login'));
+        return redirect(route('login'));
     }
 
 }

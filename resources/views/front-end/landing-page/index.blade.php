@@ -7,12 +7,12 @@
 <style>
     .login-page {
         min-height: 250px;
-        margin: 90px 0;
+        margin: 90px;
     }
 
     .ads-page {
         min-height: 295px;
-        margin: 90px 0;
+        margin: 90px;
     }
 </style>
 @endpush
@@ -39,7 +39,7 @@
                 <div class="card-body login-page">
 
                     <div class="row">
-                        <form action="{{ route('public.login') }}" method="POST">
+                        <form action="{{ route('login') }}" method="POST">
                             @csrf
             
                             @if(session('status'))
@@ -53,38 +53,38 @@
                                 </h3>
 
                                 <div class="row">
-                                        <div class="form-group">
-
-                                        <label for="username" class=" col-form-label text-md-end">{{ __('Username') }}</label>
-            
-                                        <div class="col-md-12">
-                                            <input id="username" type="text" class="form-control @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" required autocomplete="username" autofocus>
-                                            @error('email')
-                                                <span class="invalid-feedback" role="alert">
-                                                    <strong>{{ $message }}</strong>
-                                                </span>
-                                            @enderror
-                                        </div>
-                                    </div>
-                                </div>
-        
-                                <div class="row">
                                     <div class="form-group">
 
-                                        <label for="password" class="col-form-label text-md-end">{{ __('Password') }}</label>
-            
-                                        <div class="col-md-12">
-                                            <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-                                            @error('password')
-                                                <span class="invalid-feedback" role="alert">
-                                                    <strong>{{ $message }}</strong>
-                                                </span>
-                                            @enderror
-                                        </div>
+                                    <label for="username" class=" col-form-label text-md-end">{{ __('Username') }}</label>
+        
+                                    <div class="col-md-12">
+                                        <input id="username" type="text" class="form-control @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" required autocomplete="username" autofocus>
+                                        @error('username')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
                                     </div>
                                 </div>
+                            </div>
+    
+                            <div class="row">
+                                <div class="form-group">
 
-                                <button type="password" id="input-submit" class="btn">Login</button>
+                                    <label for="password" class="col-form-label text-md-end">{{ __('Password') }}</label>
+        
+                                    <div class="col-md-12">
+                                        <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                                        @error('password')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                    </div>
+                                </div>
+                            </div>
+
+                                <button type="password" id="input-submit" class="btn mt-1">Login</button>
             
                         </form>
                     </div>                    

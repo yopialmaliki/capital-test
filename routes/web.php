@@ -45,8 +45,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/', [LandingPageController::class, 'index'])->name('index');
-Route::get('/login', [LoginController::class, 'showLoginForm'])->name('public.login');
-Route::get('/register', [LandingPageController::class, 'register'])->name('public.register');
+// Route::get('/login', [LoginController::class, 'showLoginForm'])->name('public.login');
+// Route::get('/register', [LandingPageController::class, 'register'])->name('public.register');
 
 Route::resource('public', LandingPageController::class);
 

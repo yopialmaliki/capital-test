@@ -70,7 +70,7 @@ class LandingPageController extends Controller {
 
             $status  = 'success';
             $message = "Save Successfully";
-            $route = redirect(route('public.login'));
+            $route = redirect(route('login'));
 
             DB::commit();
         } catch (\Exception $er) {
